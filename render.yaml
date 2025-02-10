@@ -5,7 +5,8 @@ services:
     buildCommand: echo "Static site, no build needed"
     staticPublishPath: .
     domains:
-      - aztec.co
+      - azteclab.co
+      - www.azteclab.co
     routes:
       - type: rewrite
         source: /*
