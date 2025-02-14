@@ -1,0 +1,266 @@
+/* Estilos específicos para la página de instrucciones */
+.workshop-instructions {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-8) 0;
+}
+
+/* Video más grande */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 46%; /* Aumentado de 40% a 46% (15% más grande) */
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+/* Sección de dos pantallas aún más compacta */
+.setup-notice {
+    background: linear-gradient(135deg, #2B7A63 0%, #1D5344 100%);
+    border: 2px solid #3C8B74; /* Borde más delgado */
+    padding: 1rem; /* Menos padding */
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    max-width: 700px; /* Más estrecho */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0; /* Asegurar que no haya espacio extra */
+}
+
+.setup-notice h2 {
+    font-size: 1.25rem; /* Título más pequeño */
+    color: white;
+    margin-bottom: 0.5rem; /* Menos espacio */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.setup-notice p {
+    color: white;
+    font-size: 0.9rem; /* Texto más pequeño */
+    line-height: 1.3;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.setup-alternative {
+    margin-top: 0.75rem; /* Menos espacio */
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem; /* Texto más pequeño */
+}
+
+.setup-icon {
+    display: none; /* Removemos los iconos para hacer el aviso más compacto */
+}
+
+/* Ajustar espacios entre secciones */
+.important-notice {
+    margin-bottom: 0.5rem;
+}
+
+.tools-section {
+    margin-top: 3rem; /* Agregar espacio antes de la sección de herramientas */
+    margin-bottom: 0.5rem;
+}
+
+/* Ajuste del navbar */
+main.container {
+    padding-top: 140px !important; /* Reducido de 180px */
+}
+
+/* Título de la página */
+.page-title {
+    font-size: 2rem;
+    color: var(--color-gray-900);
+    text-align: center;
+    margin-bottom: 2rem; /* Reducido de 3rem */
+    line-height: 1.3;
+    margin-top: -1rem; /* Nuevo: mover título hacia arriba */
+}
+
+/* Quitar el ícono de exclamación */
+.notice-header i {
+    display: none;
+}
+
+.notice-header h2 {
+    margin-left: 0;
+}
+
+/* Sección de herramientas */
+.tools-section {
+    background: linear-gradient(135deg, #f8f8f8 0%, #ebe7e0 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tools-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tools-header h2 {
+    font-size: 1.75rem;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tool-card i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    background: var(--color-background);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.tool-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-gray-900);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.tool-card p {
+    color: var(--color-gray-600);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.tool-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tool-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-card:hover .tool-link {
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Ajustar espacios en la sección de recordatorio */
+.session-info {
+    background: var(--color-background);
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+    padding: 0;
+}
+
+.session-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.session-header h2 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.info-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Ajustar espacios dentro de las tarjetas */
+.info-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.75rem;
+}
+
+.info-icon i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.info-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.info-card p {
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* Estilo para el texto debajo del video */
+.video-description {
+    background: rgba(43, 122, 99, 0.1);
+    border-left: 3px solid var(--color-primary);
+    padding: 1rem;
+    margin-top: -1rem;
+    font-size: 0.95rem;
+    color: var(--color-gray-700);
+    line-height: 1.5;
+} 
