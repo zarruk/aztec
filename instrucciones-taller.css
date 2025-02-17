@@ -263,4 +263,54 @@ main.container {
     font-size: 0.95rem;
     color: var(--color-gray-700);
     line-height: 1.5;
+}
+
+/* Estilos para el resource box */
+.resource-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.resource-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.resource-header i {
+    font-size: 24px;
+    color: #2B7A63;
+}
+
+.resource-header h3 {
+    margin: 0;
+    color: #2B7A63;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.resource-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--color-gray-700);
+}
+
+.resource-link {
+    color: #2B7A63;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #2B7A63;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.resource-link:hover {
+    color: #1a4b3c;
+    border-bottom-color: #1a4b3c;
 } 
