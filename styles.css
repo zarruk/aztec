@@ -600,6 +600,7 @@ footer {
 
 /* Actualizar los estilos de la lista de espera */
 .waitlist-container {
+    display: none; /* Oculto por defecto */
     text-align: center;
     margin-top: var(--spacing-8);
 }
@@ -943,4 +944,87 @@ footer {
     #testimonios::before {
         font-size: 80px;
     }
+}
+
+/* Workshop Instructions Page */
+.workshop-instructions {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-8) 0;
+}
+
+/* Más espacio entre secciones */
+.setup-notice,
+.important-notice,
+.tools-section {
+    margin-bottom: 4rem !important;
+}
+
+/* Mejorar visualmente la sección de dos pantallas */
+.setup-notice {
+    background: linear-gradient(135deg, #2B7A63 0%, #1D5344 100%);
+    border: 3px solid #3C8B74;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: var(--border-radius-xl);
+    text-align: center;
+}
+
+.setup-notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 60%);
+}
+
+.setup-icon {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+}
+
+.setup-notice h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.setup-notice p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.setup-alternative {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.setup-alternative i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Ajustar el espacio superior para que el navbar no se sobreponga */
+main.container {
+    padding-top: 180px !important;
 } 
