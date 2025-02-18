@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="https://checkout.bold.co/library/boldPaymentButton.js"></script>
 </head>
 <body>
     <header class="hero">
@@ -161,21 +160,8 @@
                         <input type="tel" id="phone" required>
                     </div>
                     <button class="button button-primary" onclick="submitRegistration()">
-                        Continuar al pago
+                        Registrarme al taller
                     </button>
-                </div>
-
-                <div id="bold-button-container" style="display: none; text-align: center; margin-top: 20px;">
-                    <h3>Realizar pago</h3>
-                    <p>Por favor realiza el pago para asegurar tu cupo</p>
-                    <script
-                        data-bold-button
-                        data-api-key="TU_API_KEY_AQUÍ"
-                        data-description="Taller de Lectura de Recibos y Firmas"
-                        data-amount="99000"
-                        data-currency="COP"
-                        data-render-mode="embedded"
-                    ></script>
                 </div>
             </div>
         </section>
@@ -300,7 +286,7 @@
     function showSuccessMessage(isWaitlist = false) {
         const message = isWaitlist 
             ? '¡Te has registrado exitosamente en la lista de espera! Te contactaremos cuando haya nuevos cupos disponibles.'
-            : '¡Registro exitoso! Te contactaremos pronto con los detalles del pago.';
+            : '¡Registro exitoso! En breve recibirás un mensaje por WhatsApp con los detalles del pago.';
         
         const successDiv = document.createElement('div');
         successDiv.className = 'registration-success';
@@ -433,11 +419,36 @@
                 return;
             }
 
-            // Ocultar el formulario de datos
-            document.querySelector('.user-data-form').style.display = 'none';
+            const response = await fetch('https://aztec.app.n8n.cloud/webhook/a466287a-5bad-45a2-a2fa-dd768a6319bf', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: userData.fullName,
+                    email: userData.email,
+                    phone: registrationPhoneInput.getNumber(),
+                    registrationDate: new Date().toISOString(),
+                    date: selectedDate,
+                    source: 'taller para lectura de recibos y creación de firmas'
+                })
+            });
 
-            // Mostrar el botón de Bold
-            document.getElementById('bold-button-container').style.display = 'block';
+            if (!response.ok) {
+                throw new Error('Error en el envío');
+            }
+
+            showSuccessMessage(false);
+            
+            // Limpiar campos
+            document.getElementById('fullName').value = '';
+            document.getElementById('email').value = '';
+            registrationPhoneInput.setNumber('');
+            userData = {
+                fullName: '',
+                email: '',
+                phone: ''
+            };
             
         } catch (error) {
             console.error('Error detallado al registrarse:', error);
