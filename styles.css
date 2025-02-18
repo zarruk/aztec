@@ -190,13 +190,28 @@ body {
     margin-bottom: var(--spacing-12);
 }
 
+/* Primero, asegurémonos que el contenedor tenga el ancho adecuado */
+#talleres .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-4);
+}
+
+/* Modificar el grid para que sea una línea horizontal */
 .workshop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-8);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-8);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-4);
 }
 
 .workshop-card {
+    flex: 0 0 250px;
+    width: 250px;
+    margin: 0;
     background: var(--color-background);
     border-radius: var(--border-radius-xl);
     overflow: hidden;
@@ -315,49 +330,6 @@ footer {
     opacity: 0.1;
     margin: 0 auto;
     max-width: 200px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .workshop-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats {
-        flex-direction: column;
-    }
-
-    .hero-content {
-        text-align: center;
-    }
-
-    .logo-text {
-        display: none;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: var(--spacing-8);
-    }
-
-    .footer-links {
-        flex-direction: column;
-        gap: var(--spacing-4);
-    }
-
-    .logo-image {
-        height: 80px;
-    }
-
-    .hero {
-        padding: calc(100px + var(--spacing-16)) 0 var(--spacing-16);
-    }
 }
 
 /* Video section */
