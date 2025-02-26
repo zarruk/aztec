@@ -2,11 +2,12 @@ services:
   - type: web
     name: aztec
     env: static
-    buildCommand: echo "Static site, no build needed"
+    buildCommand: echo "No build required"
     staticPublishPath: .
-    domains:
-      - azteclab.co
-      - www.azteclab.co
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
     routes:
       - type: rewrite
         source: /*
