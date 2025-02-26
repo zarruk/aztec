@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatización de Análisis Fundamental - No Code Community</title>
+    <title>Automatización de Análisis Fundamental - Aztec</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,26 +60,85 @@
 
                 <div class="features-grid" style="max-width: 1000px; margin: 0 auto;">
                     <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Gemini" style="width: 32px; height: 32px;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Gemini" style="width: 64px; height: 64px;">
                         <h3>Gemini 2.0 Flash</h3>
                         <p>Procesa y clasifica información automáticamente con la IA más avanzada de Google</p>
                     </div>
                     <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4616/4616809.png" alt="OpenAI">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4616/4616809.png" alt="OpenAI" style="width: 64px; height: 64px;">
                         <h3>OpenAI</h3>
                         <p>Utiliza IA avanzada para analizar y extraer información clave</p>
                     </div>
                     <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968523.png" alt="Google Drive">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968523.png" alt="Google Drive" style="width: 64px; height: 64px;">
                         <h3>Google Drive</h3>
                         <p>Integra y organiza documentos automáticamente</p>
                     </div>
                     <div class="feature-card">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" alt="Google Docs">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968517.png" alt="Google Docs" style="width: 64px; height: 64px;">
                         <h3>Google Docs</h3>
                         <p>Genera reportes automáticos con los resultados del análisis</p>
                     </div>
                 </div>
+
+                <style>
+                .features-grid {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                    padding: 20px 0;
+                }
+                
+                .feature-card {
+                    flex: 0 1 220px;
+                    min-height: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: var(--spacing-4);
+                    border-radius: 8px;
+                    background: var(--color-white);
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    justify-content: flex-start;
+                }
+
+                .feature-card img {
+                    width: 64px;
+                    height: 64px;
+                    object-fit: contain;
+                    margin-bottom: var(--spacing-3);
+                }
+
+                .feature-card h3 {
+                    margin: var(--spacing-2) 0;
+                    font-size: 1.1rem;
+                    min-height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .feature-card p {
+                    margin: 0;
+                    font-size: 0.9rem;
+                    color: var(--color-gray-600);
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    min-height: 60px;
+                }
+
+                @media (max-width: 1024px) {
+                    .features-grid {
+                        justify-content: flex-start;
+                        overflow-x: auto;
+                        padding-left: var(--spacing-4);
+                        padding-right: var(--spacing-4);
+                    }
+                }
+                </style>
             </div>
         </section>
 
@@ -108,7 +167,7 @@
     </main>
 
     <footer class="footer">
-        <p>© 2024 No Code Community. Todos los derechos reservados.</p>
+        <p>© 2024 Aztec. Todos los derechos reservados.</p>
     </footer>
 
     <script>
